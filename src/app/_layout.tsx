@@ -14,3 +14,20 @@ export default function TabLayout() {
     </ThemeProvider>
   );
 }
+
+
+// //דוגמא 2
+// import { Tabs } from 'expo-router';
+// import Ionicons from '@expo/vector-icons/Ionicons';
+
+// export default function TabLayout() {
+//   return (
+//         <Tabs screenOptions={{ headerShown: false, }}>
+//             <Tabs.Screen name="index" options={{ tabBarIcon: ({ color }) => <Ionicons name="home" size={30} color="#1F1F1F" />, title: 'בית' }} />
+//             <Tabs.Screen name="explore" options={{ tabBarIcon: ({ color }) => <Ionicons name="settings" size={30} color="#1F1F1F" />, title: 'מערכת' }} />
+//             <Tabs.Screen name="login" options={{ tabBarIcon: ({ color }) => <Ionicons name="calendar" size={30} color="#1F1F1F" />, title: 'לו״ז' }} />
+//         </Tabs>
+//     );
+// }
+
+
