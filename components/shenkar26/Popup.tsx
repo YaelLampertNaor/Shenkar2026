@@ -1,9 +1,10 @@
-import { View, StyleSheet,TouchableOpacity } from 'react-native'
-import React, {useState} from 'react'
-import { Button, Snackbar } from 'react-native-paper';
+import { View, StyleSheet, TouchableOpacity, Text } from 'react-native'
+import React, { useState } from 'react'
+import { Snackbar } from 'react-native-paper';
 
+type text = { message: string }
 
-export default function Popup() {
+export default function Popup({ message }: text) {
   const [visible, setVisible] = useState(true);
 
   const onToggleSnackBar = () => setVisible(!visible);
@@ -12,7 +13,7 @@ export default function Popup() {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={onToggleSnackBar}>{visible ? 'הסתר' : 'הצג'}</TouchableOpacity>
+      <TouchableOpacity onPress={onToggleSnackBar}><Text>{visible ? 'הסתר' : 'הצג'}</Text></TouchableOpacity>
       <Snackbar
         visible={visible}
         onDismiss={onDismissSnackBar}
@@ -21,7 +22,9 @@ export default function Popup() {
           onPress: () => {
           },
         }}>
-        הודעת פופאפ סנאקבר
+        <Text style={styles.text}>
+         {message}
+         </Text>
       </Snackbar>
     </View>
   );
@@ -32,4 +35,5 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
   },
+  text: { color: "white" }
 });

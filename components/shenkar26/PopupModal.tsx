@@ -1,9 +1,10 @@
 import { View, Text, Modal, Alert, TouchableOpacity, StyleSheet } from 'react-native'
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
+type bool = { show: boolean }
 
-export default function PopupModal({show}:boolean) {
+export default function PopupModal({ show }: bool) {
   const [modalVisible, setModalVisible] = useState(show);
   return (
     <SafeAreaProvider>
