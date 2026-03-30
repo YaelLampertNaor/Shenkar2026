@@ -23,9 +23,9 @@ export default function login() {
         <TextInput placeholder="הודעה" onChangeText={(t) => setMsg(t) }></TextInput>
       </View>
       <Button title="שליחת ההודעה" onPress={() => {click()}} />
-        {/* <Text>{msg}</Text> */}
 
         {showPop && <Popup message={"יש למלא את כל השדות"}/>}
+
     </View>
   )
 }

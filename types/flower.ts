@@ -1,5 +1,5 @@
 export type flower = {
-    item_id: number,
+    item_id: string,
     image: string,
     color: string,
     text?: string,
